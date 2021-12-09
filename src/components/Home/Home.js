@@ -1,12 +1,100 @@
 import React from "react";
 import Typical from 'react-typical';
+import Particles from "react-tsparticles";
 import './Home.css';
 
 const Home = () => {
+    const particlesInit = (main) => {
+        console.log(main);
+        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    };
+
+    const particlesLoaded = (container) => {
+        console.log(container);
+    };
+
     return (
-        <div className="profile-container">
+
+<div className="home-section">
+<Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={{
+            fpsLimit: 60,
+            interactivity: {
+                events: {
+                    onClick: {
+                        enable: true,
+                        mode: "push",
+                    },
+                    onHover: {
+                        enable: true,
+                        mode: "repulse",
+                    },
+                    resize: true,
+                },
+                modes: {
+                    bubble: {
+                        distance: 400,
+                        duration: 2,
+                        opacity: 0.8,
+                        size: 40,
+                    },
+                    push: {
+                        quantity: 4,
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4,
+                    },
+                },
+            },
+            particles: {
+                color: {
+                    value: "#ffffff",
+                },
+
+                collisions: {
+                    enable: true,
+                },
+                move: {
+                    direction: "none",
+                    enable: true,
+                    outMode: "bounce",
+                    random: false,
+                    speed: 3,
+                    straight: false,
+                },
+                number: {
+                    density: {
+                        enable: true,
+                        value_area: 800,
+                    },
+                    value: 80,
+                },
+                opacity: {
+                    value: 0.5,
+                },
+                shape: {
+                    type: "image",
+                    "image":{
+                        "src": "https://i.ibb.co/34c49z7/clear-bubble-design-element-vector-blue-background-53876-126283-removebg-preview.png"
+                    }
+                    
+                },
+                size: {
+                    random: false,
+                    value: 20,
+                },
+            },
+            detectRetina: true,
+        }}
+        
+    />
+        <div className="profile-container"> 
             <div className="profile-parent">
-                <div className="profile-details">
+               <div className="profile-details">
                     <div className="colz">
                         <div className="colz-icon">
                             <a href="#">
@@ -73,6 +161,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

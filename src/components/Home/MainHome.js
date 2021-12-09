@@ -6,7 +6,7 @@ import './MainHome.css';
 const MainHome = () => {
     return (
         <div className="mainhome-container">
-            <Home></Home>
+             <Home></Home>
             <Footer></Footer>
         </div>
     );

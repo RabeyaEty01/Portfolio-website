@@ -1,0 +1,18 @@
+   .odometer-section{
+       background-color: #23263b;
+       width: 20%;
+       height: 15%;
+       margin: 5%;
+       padding: 2%;
+       float: left;
+       border-top-left-radius: 35%;
+       border-bottom-right-radius: 35%;
+       text-align: center;
+       font-size: 1.5rem;
+       color: white;
+       font-family: cursive;
+    }
+    .odometer-part{
+       text-align: center;
+       margin-left: 30%;
+    }

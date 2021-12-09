@@ -1,3 +1,8 @@
+.home-section{
+    top:0;
+    left: 0;
+    position: relative;
+}
 .profile-container{
     display: flex;
     align-items: center;
@@ -135,5 +140,8 @@
     .profile-details{
         width: 90%;
     }
-   
+}
+.tsparticles-canvas-el{
+    position:absolute !important;
+    height: 92vh !important;
 }
